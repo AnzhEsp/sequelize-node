@@ -1,0 +1,6 @@
+Host:ec2-34-236-87-247.compute-1.amazonaws.com
+Database:d51mm1ub2m58lp
+User:igprtjzlkddmtv
+Port:5432
+Password:7b50ee64352a5ef76730fc01deb3b376b3424608ba93437c93c2fa32e5ee8484
+URI:postgres://igprtjzlkddmtv:7b50ee64352a5ef76730fc01deb3b376b3424608ba93437c93c2fa32e5ee8484@ec2-34-236-87-247.compute-1.amazonaws.com:5432/d51mm1ub2m58lp
