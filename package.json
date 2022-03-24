@@ -2,6 +2,9 @@
     "name": "sequelize",
     "version": "1.0.0",
     "description": "",
+    "engines": {
+        "node": "16.13.0"
+    },
     "main": "index.js",
     "scripts": {
         "start": "node index"
@@ -10,7 +13,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "bcrypt": "^4.0.0",
+        "bcrypt": "^5.0.1",
         "cors": "^2.8.5",
         "dotenv": "^16.0.0",
         "express": "^4.17.3",
