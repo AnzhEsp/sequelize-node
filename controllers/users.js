@@ -6,18 +6,22 @@ const bcrypt = require("bcrypt");
 // ! OBTENER TODOS LOS USUARIOS
 const getUusers = async (req = request, res = response) => {
     const { limite = 5, desde = 0 } = req.query;
-    const [users, total] = await Promise.all([
-        User.findAll({
-            offset: desde,
-            limit: limite,
-            attributes: ["nombre", "apellidos", "email", "pass", "tipo"],
-        }),
-        User.count(),
-    ]);
-    if (total === 0) {
-        res.status(200).json({ data: "No hay datos" });
+    try {
+        const [users, total] = await Promise.all([
+            User.findAll({
+                offset: desde,
+                limit: limite,
+                attributes: ["nombre", "apellidos", "email", "pass", "tipo"],
+            }),
+            User.count(),
+        ]);
+        if (total === 0) {
+            res.status(200).json({ data: "No hay datos" });
+        }
+        res.status(200).json({ data: { users, total } });
+    } catch (error) {
+        res.json("No hay data");
     }
-    res.status(200).json({ data: { users, total } });
 };
 
 // ! CREAR USUARIOS
