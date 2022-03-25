@@ -1,4 +1,4 @@
-const bcryp = require("bcrypt");
+const bcryp = require("bcryptjs");
 const { User } = require("../models/users");
 const { generarJWT } = require("../helpers/generar-jwt");
 const { request } = require("express");

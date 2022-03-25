@@ -14,9 +14,6 @@ sequelize
         console.log("conexion");
     })
     .catch((error) => {
-        console.log(
-            "No se logro hacer la conexion con la base de datos",
-            error
-        );
+        console.log("No se logro hacer la conexion con la base de datos");
     });
 module.exports = sequelize;

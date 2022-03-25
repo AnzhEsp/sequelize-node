@@ -1,7 +1,7 @@
 const { request } = require("express");
 const { response } = require("express");
 const { User } = require("../models/users");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 // ! OBTENER TODOS LOS USUARIOS
 const getUusers = async (req = request, res = response) => {
