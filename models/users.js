@@ -1,46 +1,46 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("../db/db");
+const { DataTypes } = require('sequelize')
+const sequelize = require('../db/db')
 const User = sequelize.define(
-  "usuarios",
+  'usuarios',
   {
-    //modelo de usuarios
-    idusuaio: {
+    // modelo de usuarios
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
     nombre: {
       type: DataTypes.CHAR(50),
-      allowNull: false,
+      allowNull: false
     },
     apellidos: {
       type: DataTypes.CHAR(100),
-      allowNull: false,
+      allowNull: false
     },
     email: {
       type: DataTypes.CHAR(30),
       allowNull: false,
-      unique: true,
+      unique: true
     },
     pass: {
       type: DataTypes.CHAR(250),
-      allowNull: false,
+      allowNull: false
     },
     status: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 1,
+      defaultValue: 1
     },
     tipo: {
       type: DataTypes.CHAR(20),
-      allowNull: false,
-    },
+      allowNull: false
+    }
   },
   {
     createdAt: false,
-    updatedAt: false,
+    updatedAt: false
   }
-);
+)
 
-module.exports = { User };
+module.exports = { User }
